@@ -3,7 +3,7 @@
 <ion-content>
   <div style="margin-top: 50px;">
     <div *ngFor ="let each of data">
-      <ion-card>
+      <ion-card routerDirection="root" [routerLink]="['/description-data/doctor']" lines="none" detail="false" routerLinkActive="selected">
         <ion-row>
           <ion-col size="3">
             <img src="../assets/img/madison.jpg" height="100%" width="100%"/>

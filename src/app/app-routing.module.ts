@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'list-data/:id',
     loadChildren: () => import('./list-data/list-data.module').then( m => m.ListDataPageModule)
+  },
+  {
+    path: 'description-data/:id',
+    loadChildren: () => import('./description-data/description-data.module').then( m => m.DescriptionDataPageModule)
   }
 ];
 

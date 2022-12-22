@@ -1,21 +1,111 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<app-header></app-header>
+<ion-content [fullscreen]="true" >
+    <ion-searchbar></ion-searchbar>
+  <div style="padding:10%;">
+    <div style="border-radius: 10px;">
+      <ion-slides [options]="{ slidesPerView:1, autoplay: {delay: 2500} }" style="border-radius: 5px;">
+        <ion-slide>
+          <IonCard >
+            <ion-img src="assets/img/7hfyoyse54.jpg" style="height: 200px; width: 400px;"></ion-img>
+          </IonCard>
+        </ion-slide>
+        <ion-slide>
+          <IonCard >
+            <ion-img src="assets/img/hospital,_green.jpg" style="height: 200px; width: 400px;"></ion-img>
+          </IonCard>
+        </ion-slide>
+        <ion-slide>
+          <IonCard >
+            <ion-img src="assets/img/7hfyoyse54.jpg" style="height: 200px; width: 400px;"></ion-img>
+          </IonCard>
+        </ion-slide>
+      </ion-slides>
+    </div>
   </div>
+  
+  
+  <div >
+    <ion-label style="padding: 5%;"><b>Services</b></ion-label>
+    <ion-grid style="padding: 5%;">
+      <ion-row>
+        <ion-col class="menuitem">
+            <IonCard routerDirection="root" [routerLink]="['/list-data/doctor']" lines="none" detail="false" routerLinkActive="selected">
+              <div style="display: flex; align-items: center;justify-content: center;">
+                <ion-avatar>
+                  <ion-img src="assets/menu/doctor.png"></ion-img>
+                </ion-avatar>
+              </div>         
+                <ion-label >
+                  Doctor
+                </ion-label>
+            </IonCard>
+        </ion-col>
+        <ion-col class="menuitem">
+          <IonCard routerDirection="root" [routerLink]="['/list-data/pharma']" lines="none" detail="false" routerLinkActive="selected">
+            <div style="display: flex; align-items: center;justify-content: center;">
+              <ion-avatar>
+                <ion-img src="assets/menu/pharmacy.png"></ion-img>
+              </ion-avatar>
+            </div>
+              <ion-label>
+                Pharma
+              </ion-label>
+          </IonCard>
+        </ion-col>
+        <ion-col class="menuitem">
+          <IonCard routerDirection="root" [routerLink]="['/list-data/diagnostics']" lines="none" detail="false" routerLinkActive="selected">
+            <div style="display: flex; align-items: center;justify-content: center;">
+              <ion-avatar>
+                <ion-img src="assets/menu/diagnostics.png"></ion-img>
+              </ion-avatar>
+            </div>
+  
+            <ion-label>
+              Diagnostics
+            </ion-label>
+          </IonCard>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="menuitem">
+          <IonCard routerDirection="root" [routerLink]="['/list-data/hospitals']" lines="none" detail="false" routerLinkActive="selected">
+            <div style="display: flex; align-items: center;justify-content: center;">
+              <ion-avatar>
+                <ion-img src="assets/menu/hospitals.png"></ion-img>
+              </ion-avatar>
+            </div>
+            <ion-label>
+              Hospitals
+            </ion-label>
+          </IonCard>
+        </ion-col>
+        <ion-col class="menuitem">
+          <IonCard routerDirection="root" [routerLink]="['/list-data/records']" lines="none" detail="false" routerLinkActive="selected">        
+            <div style="display: flex; align-items: center;justify-content: center;">
+              <ion-avatar>
+                <ion-img src="assets/menu/medical_report.png"></ion-img>
+              </ion-avatar>
+            </div>
+            <ion-label>
+              Records
+            </ion-label>
+          </IonCard>
+        </ion-col>
+        <ion-col class="menuitem">
+          <IonCard routerDirection="root" [routerLink]="['/list-data/others']" lines="none" detail="false" routerLinkActive="selected">
+            <div style="display: flex; align-items: center;justify-content: center;">
+              <ion-avatar>
+                <ion-img src="assets/menu/others.png"></ion-img>
+              </ion-avatar>
+            </div>
+            <ion-label>
+              Others
+            </ion-label>
+          </IonCard>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>
+<app-footer></app-footer>

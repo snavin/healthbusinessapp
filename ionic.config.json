@@ -1,7 +1,10 @@
 {
-  "name": "healthbusinessapp",
+  "name": "urhealth",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular"
 }

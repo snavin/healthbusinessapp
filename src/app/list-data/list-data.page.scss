@@ -1,0 +1,17 @@
+ion-content {
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  --padding-top: 10px;
+  border-radius: 60px 60px 0 0 ;
+  background-color: #f2f3f8!important;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ion-col {
+    padding:0 0 0 0;
+    text-align: center;
+}
+  

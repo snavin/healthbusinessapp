@@ -2,16 +2,16 @@
 
 <ion-content>
   <div style="margin-top: 50px;">
-    <div *ngFor ="let each of data">
-      <ion-card routerDirection="root" [routerLink]="['/description-data/doctor']" lines="none" detail="false" routerLinkActive="selected">
+    <div *ngFor ="let each of members">
+      <ion-card routerDirection="root" [routerLink]="['/description-data/doctor/']" lines="none" detail="false" routerLinkActive="selected">
         <ion-row>
           <ion-col size="3">
             <img src="../assets/img/madison.jpg" height="100%" width="100%"/>
           </ion-col>
           <ion-col class="list_image">
             <ion-card-content>
-              <ion-card-title>Doctor A</ion-card-title>
-              <ion-card-subtitle>Heart surgeon - Hospital A</ion-card-subtitle>
+              <ion-card-title>{{ each.name }}</ion-card-title>
+              <ion-card-subtitle>{{ each.speciality }} - {{ each.hospital }}</ion-card-subtitle>
             </ion-card-content>
             <ion-row>
               <ion-col size="3">

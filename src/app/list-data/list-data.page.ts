@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
+
 @Component({
   selector: 'app-list-data',
   templateUrl: './list-data.page.html',
@@ -7,11 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListDataPage implements OnInit {
 
-  constructor() { }
+  constructor(
+              public router: Router,
+              private platform: Platform,) {
+                this.platform.backButton.subscribeWithPriority(-1, () => {
+                  this.router.navigate(['/']);
+                  console.log("clicked back button");
+                });
+               }
+
+  members: doctors[] = [{"speciality": "heart", "name": "namea", "hospital": "a hosp"},
+                         {"speciality": "heart", "name": "nameb", "hospital": "b hosp"},
+                         {"speciality": "heart", "name": "namec", "hospital": "c hosp"}];
 
   ngOnInit() {
+ 
   }
 
-  data = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6]
+  
 
+}
+
+export interface doctors {
+  name: string,
+  speciality: string,
+  hospital: string
 }

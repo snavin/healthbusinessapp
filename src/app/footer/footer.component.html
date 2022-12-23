@@ -1,11 +1,14 @@
 <ion-footer class="ion-no-border" style="padding:10px; ">
   <ion-toolbar style="border-radius: 20px; height: 40px !important;">
     <ion-row style="height: 60px !important;">
-      <ion-col style="text-align: center;font-size: x-large; vertical-align: middle;">
+      <ion-col style="text-align: center;font-size: x-large;" routerDirection="root" [routerLink]="['/']" lines="none" detail="false" routerLinkActive="selected">
         <ion-icon name="home-outline"></ion-icon>
       </ion-col>
-      <ion-col style="text-align: center;font-size: x-large;">
+      <ion-col style="text-align: center;font-size: x-large;" routerDirection="root" [routerLink]="['/list-data/hospitals']" lines="none" detail="false" routerLinkActive="selected">
         <ion-icon name="bag-add-outline"></ion-icon>
+      </ion-col>
+      <ion-col style="text-align: center;font-size: x-large;">
+        <ion-icon name="cart"></ion-icon>
       </ion-col>
       <ion-col style="text-align: center;font-size: x-large;">
         <ion-icon name="fitness-outline"></ion-icon>

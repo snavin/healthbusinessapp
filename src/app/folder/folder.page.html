@@ -80,7 +80,7 @@
           </IonCard>
         </ion-col>
         <ion-col class="menuitem">
-          <IonCard routerDirection="root" [routerLink]="['/list-data/records']" lines="none" detail="false" routerLinkActive="selected">        
+          <IonCard routerDirection="root" lines="none" detail="false" routerLinkActive="selected" (click)="records($event)">        
             <div style="display: flex; align-items: center;justify-content: center;">
               <ion-avatar>
                 <ion-img src="assets/menu/medical_report.png"></ion-img>
@@ -106,6 +106,17 @@
       </ion-row>
     </ion-grid>
   </div>
+  <div>
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12" class="ion-text-center">
+          <input type="file" (change)="loadImageFromDevice($event)" id="file-input"
+            accept="image/png, image/jpeg">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
 
 </ion-content>
 <app-footer></app-footer>
